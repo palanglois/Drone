@@ -4,9 +4,9 @@ set(OpenCV_DIR ~/Documents/OpenCV//)
 
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
-project( DisplayImage )
+project( DroneProject )
 find_package( OpenCV REQUIRED )
 
-add_executable( DisplayImage main.cpp tools.cpp RecognitionLearning.cpp PeopleRecognition.cpp )
+add_executable( DroneProject main.cpp tools.cpp RecognitionLearning.cpp PeopleRecognition.cpp )
 
-target_link_libraries( DisplayImage ${OpenCV_LIBS} )
+target_link_libraries( DroneProject ${OpenCV_LIBS} )

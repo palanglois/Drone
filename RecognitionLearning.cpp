@@ -35,4 +35,15 @@ int takePicture(int number, double ms,string address,string filename)
     file << address+"im"+to_string(i)+".jpg" << std::endl; // Add the pict to the bg.txt
   }
   file.close();
+  return 1;
+}
+
+int takeBackground(int number, double ms)
+{
+  takePicture(number,ms,"bgPict","bg.txt");
+}
+
+int takeForeground(int number, double ms)
+{
+  takePicture(number,ms,"fgPict","fg.txt");
 }

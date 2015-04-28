@@ -2,10 +2,7 @@
 
 using namespace cv;
 
-
-
-
-
+//Segment a body with a rectangle giving its location
 void segmentBody(cv::Mat image)
 {
   cv::Mat blank(image.size(),CV_8U,cv::Scalar(0xFF));

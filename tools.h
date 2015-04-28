@@ -1,6 +1,7 @@
 #ifndef TOOLS_H
 #define TOOLS_H
 
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
