@@ -12,7 +12,7 @@
 
 int locatePeople(std::vector<float> descriptor = cv::HOGDescriptor::getDefaultPeopleDetector());
 void segmentBody(cv::Mat image);
-int takePicture(int number, double fps);
+
 std::string to_string(int n);
 
 #endif
