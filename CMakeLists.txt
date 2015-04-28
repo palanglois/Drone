@@ -7,6 +7,6 @@ set(CMAKE_CXX_FLAGS "-std=c++11")
 project( DisplayImage )
 find_package( OpenCV REQUIRED )
 
-add_executable( DisplayImage main.cpp tools.cpp RecognitionLearning.cpp )
+add_executable( DisplayImage main.cpp tools.cpp RecognitionLearning.cpp PeopleRecognition.cpp )
 
 target_link_libraries( DisplayImage ${OpenCV_LIBS} )

@@ -10,7 +10,6 @@
 #include <opencv/highgui.h>
 #include "WatershedSegmenter.h"
 
-int locatePeople(std::vector<float> descriptor = cv::HOGDescriptor::getDefaultPeopleDetector());
 void segmentBody(cv::Mat image);
 
 std::string to_string(int n);
