@@ -4,4 +4,4 @@ v4l2ucp
 v4l-utils
 libv4l-dev
 
-OpenCV
+OpenCV : libopencv-dev

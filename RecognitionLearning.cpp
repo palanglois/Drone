@@ -10,8 +10,8 @@ int takePicture(int number, double ms,string address,string filename)
   std::ofstream file("images/"+filename,std::ios::out);
   if(!file)
     return -1;
-  //VideoCapture cap(1);
-  VideoCapture cap(CV_CAP_ANY);
+  VideoCapture cap(1);
+  //VideoCapture cap(CV_CAP_ANY);
   //cap.set(CV_CAP_PROP_FRAME_WIDTH, 320);
   //cap.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
   double fps = 15;
@@ -38,12 +38,15 @@ int takePicture(int number, double ms,string address,string filename)
   return 1;
 }
 
+//Taking the foreground's pictures
 int takeBackground(int number, double ms)
 {
-  takePicture(number,ms,"bgPict","bg.txt");
+  takePicture(number,ms,"bgPict/","bg.txt");
 }
+
+//Taking the background's pictures
 
 int takeForeground(int number, double ms)
 {
-  takePicture(number,ms,"fgPict","fg.txt");
+  takePicture(number,ms,"fgPict/","fg.txt");
 }
