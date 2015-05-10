@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#Makes 100 times more positive samples
+#pictures must be in build/
+
+#create Distorded copy of the positive samples (100 per sample)
+for i in `seq 0 49`;
+do	
+	pref="./build/images/imfg"
+	postOne=".jpg"
+	postTwo="samples.vec"
+	titleOne=$pref$i$postOne
+	titleTwo=$pref$i$postTwo
+	opencv_createsamples -img $titleOne -num 100 -bg bg.txt -vec $titleTwo
+done
+
+#if posSamples directory is not created, create it
+if [ -d "./build/images/posSamples" ];then
+	mkdir build/images/posSamples
+fi
+
+#copy the positive vectors inside
+find build/images -name '*samples.vec' -type f -exec cp {} build/images/posSamples \;
+
+#merge them into one single vecfile posSamples.vec
+#mergevec.py must be in the current directory
+python mergevec.py -v build/images/posSamples -o build/images/posSamples.vec

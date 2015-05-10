@@ -7,8 +7,8 @@ int locatePeople(std::vector<float> descriptor)
 {
   //Opening Camera
   VideoCapture cap(CV_CAP_ANY);
-  cap.set(CV_CAP_PROP_FRAME_WIDTH, 320);
-  cap.set(CV_CAP_PROP_FRAME_HEIGHT, 240);    
+  cap.set(CV_CAP_PROP_FRAME_WIDTH, 200);
+  cap.set(CV_CAP_PROP_FRAME_HEIGHT, 150);    
   if (!cap.isOpened())
     return -1;
   
@@ -44,7 +44,7 @@ int locatePeople(std::vector<float> descriptor)
       r.height = cvRound(r.height*0.9);
       rectangle(img, r.tl(), r.br(), cv::Scalar(0,255,0), 2);
     }
-    flip(img,img,-1); //Remove this line if the picture is reversed
+    //flip(img,img,-1); //Remove this line if the picture is reversed
     imshow("video capture", img);
     if (waitKey(20) >= 0)
       break;

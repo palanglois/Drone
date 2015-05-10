@@ -1,0 +1,1 @@
+opencv_haartraining -data haar -vec posSamples.vec -bg bg.txt -nstages 10 -mem 1500 -mode all -w 24 -h 24
