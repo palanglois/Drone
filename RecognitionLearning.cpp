@@ -10,8 +10,8 @@ int takePicture(int number, int skip,string address,string filename,string prefi
   std::ofstream file((address+filename).c_str(),std::ios::out);
   if(!file)
     return -1;
-  //VideoCapture cap(1);
-  VideoCapture cap(CV_CAP_ANY);
+  VideoCapture cap(1);
+  //VideoCapture cap(CV_CAP_ANY);
   //cap.set(CV_CAP_PROP_FRAME_WIDTH, 320);
   //cap.set(CV_CAP_PROP_FRAME_HEIGHT, 240);
   double fps = 15;
