@@ -1,0 +1,1 @@
+./convertCascade --size="24x24" build/images/haar build/haarcascade.xml 
