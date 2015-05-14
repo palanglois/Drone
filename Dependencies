@@ -5,3 +5,7 @@ v4l-utils
 libv4l-dev
 
 OpenCV : libopencv-dev
+
+sudo apt-get install screen python-wxgtk2.8 python-matplotlib python-opencv python-pip python-numpy
+
+sudo pip install mavproxy

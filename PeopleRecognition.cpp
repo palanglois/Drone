@@ -7,8 +7,8 @@ int locatePeople(std::vector<float> descriptor)
 {
   //Opening Camera
   VideoCapture cap(CV_CAP_ANY);
-  cap.set(CV_CAP_PROP_FRAME_WIDTH, 200);
-  cap.set(CV_CAP_PROP_FRAME_HEIGHT, 150);    
+  cap.set(CV_CAP_PROP_FRAME_WIDTH, 800/*200*/);
+  cap.set(CV_CAP_PROP_FRAME_HEIGHT, 600/*150*/);    
   if (!cap.isOpened())
     return -1;
   
